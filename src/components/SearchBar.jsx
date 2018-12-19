@@ -20,15 +20,20 @@ class SearchBox extends React.Component {
 
   render() {
     return (
-      <div className="ui segment">
+      <div className="ui blue segment">
         <form className="ui form" onSubmit={this.onFormSubmit}>
-          <div className="field">
+          <p>
             <label>Image Search</label>
+          </p>
+          <div className="ui action input">
             <input
               type="text"
               value={this.state.term}
               onChange={this.onInputChange}
             />
+            <button className="ui icon blue button" onClick={this.onFormSubmit}>
+              <i className="search icon" />
+            </button>
           </div>
         </form>
       </div>
